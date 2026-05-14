@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHE 103 - IE Summary</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .course-page {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .course-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 30px;
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            color: white;
+            border-radius: 10px;
+        }
+        
+        .course-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .course-code {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .back-btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-3px);
+        }
+        
+        .topic-section {
+            margin-bottom: 50px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .topic-title {
+            font-size: 1.8rem;
+            color: #8B4513;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #D2691E;
+        }
+        
+        .topic-content {
+            line-height: 1.7;
+        }
+        
+        .topic-content p {
+            margin-bottom: 15px;
+        }
+        
+        .topic-content ul, .topic-content ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .topic-content li {
+            margin-bottom: 10px;
+        }
+        
+        .safety-box {
+            background-color: #fff8f0;
+            border-left: 4px solid #e74c3c;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .key-point {
+            background-color: #e8f4fc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #3498db;
+        }
+        
+        .experiment-box {
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border: 1px solid #3498db;
+        }
+        
+        .technique-box {
+            background-color: #f9f7ed;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #e67e22;
+        }
+        
+        .apparatus-box {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border: 1px solid #95a5a6;
+        }
+        
+        .procedure-box {
+            background-color: #f0f8f4;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #2ecc71;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table th, table td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        
+        table th {
+            background-color: #D2691E;
+            color: white;
+        }
+        
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .warning {
+            background-color: #fff5f5;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #e74c3c;
+            font-weight: bold;
+        }
+        
+        .tip {
+            background-color: #f0fff4;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #2ecc71;
+        }
+        
+        @media (max-width: 768px) {
+            .course-header h1 {
+                font-size: 2rem;
+            }
+            
+            .topic-section {
+                padding: 20px;
+            }
+            
+            .topic-title {
+                font-size: 1.5rem;
+            }
+            
+            table {
+                font-size: 0.9rem;
+            }
+            
+            table th, table td {
+                padding: 8px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="logo.jpg" alt="IE Summary Logo" class="logo">
+                <h1>IE Summary</h1>
+                <p class="subtitle">Immaculate Envilinks 100 Level Course Summary</p>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="index.html#courses"><i class="fas fa-book"></i> Courses</a></li>
+                    <li><a href="../index.html#cbt"><i class="fas fa-laptop-code"></i> Practice CBT</a></li>
+                    <li><a href="index.html#resources"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="course-page">
+        <div class="course-header">
+            <h1>CHE 103: Chemistry Practical I</h1>
+            <p class="course-code">Course Code: CHE 103</p>
+            <p>Basic laboratory techniques, safety procedures, qualitative analysis, titrations, and experimental methods in chemistry</p>
+            <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to All Courses</a>
+        </div>
+
+        <div class="topic-section">
+            <h2 class="topic-title">1. Laboratory Safety and Equipment</h2>
+            <div class="topic-content">
+                <p>Chemistry laboratories contain potentially hazardous materials and equipment. Understanding and following safety procedures is essential.</p>
+                
+                <div class="safety-box">
+                    <h4>General Laboratory Safety Rules:</h4>
+                    <ul>
+                        <li>Always wear appropriate personal protective equipment (PPE): lab coat, safety goggles, closed-toe shoes</li>
+                        <li>Never work alone in the laboratory</li>
+                        <li>Know the location and proper use of safety equipment: eyewash stations, safety showers, fire extinguishers, fire blankets</li>
+                        <li>Never eat, drink, or apply cosmetics in the laboratory</li>
+                        <li>Keep work areas clean and organized</li>
+                        <li>Dispose of chemical waste properly according to instructions</li>
+                        <li>Report all accidents, injuries, or spills immediately to the instructor</li>
+                        <li>Wash hands thoroughly after handling chemicals and before leaving the laboratory</li>
+                    </ul>
+                </div>
+                
+                <div class="warning">
+                    <h4>⚠️ Important Safety Warnings:</h4>
+                    <ul>
+                        <li>Never taste or smell chemicals directly</li>
+                        <li>Always add acid to water, never water to acid</li>
+                        <li>Handle flammable materials away from open flames</li>
+                        <li>Use fume hoods when working with volatile or toxic chemicals</li>
+                        <li>Know the hazards of the chemicals you're working with (check MSDS - Material Safety Data Sheets)</li>
+                    </ul>
+                </div>
+                
+                <div class="key-point">
+                    <h4>Common Laboratory Equipment:</h4>
+                    <table>
+                        <tr>
+                            <th>Equipment</th>
+                            <th>Purpose</th>
+                            <th>Special Instructions</th>
+                        </tr>
+                        <tr>
+                            <td>Beakers</td>
+                            <td>Mixing, heating, and holding liquids</td>
+                            <td>Not for accurate measurements</td>
+                        </tr>
+                        <tr>
+                            <td>Graduated Cylinder</td>
+                            <td>Accurate volume measurements</td>
+                            <td>Read at meniscus at eye level</td>
+                        </tr>
+                        <tr>
+                            <td>Burette</td>
+                            <td>Dispensing precise volumes of liquids (titrations)</td>
+                            <td>Rinse with solution before use, avoid air bubbles</td>
+                        </tr>
+                        <tr>
+                            <td>Pipette</td>
+                            <td>Transferring precise volumes of liquids</td>
+                            <td>Use pipette bulb, never mouth pipetting</td>
+                        </tr>
+                        <tr>
+                            <td>Analytical Balance</td>
+                            <td>Precise mass measurements (to 0.0001g)</td>
+                            <td>Calibrate regularly, keep clean, avoid vibrations</td>
+                        </tr>
+                        <tr>
+                            <td>Hot Plate</td>
+                            <td>Heating solutions without open flame</td>
+                            <td>Use with stirring function for even heating</td>
+                        </tr>
+                        <tr>
+                            <td>Bunsen Burner</td>
+                            <td>Heating with open flame</td>
+                            <td>Know different flame types (safety, heating, roaring)</td>
+                        </tr>
+                        <tr>
+                            <td>Test Tubes</td>
+                            <td>Small-scale reactions and heating</td>
+                            <td>Never point open end toward anyone</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="apparatus-box">
+                    <h4>Glassware Handling and Cleaning:</h4>
+                    <ul>
+                        <li>Inspect glassware for cracks or chips before use</li>
+                        <li>Clean glassware thoroughly after each use</li>
+                        <li>Use appropriate cleaning solutions (detergent, acid baths for stubborn residues)</li>
+                        <li>Rinse with distilled water after cleaning</li>
+                        <li>Store clean glassware in designated areas</li>
+                    </ul>
+                </div>
+                
+                <div class="key-point">
+                    <h4>Chemical Hazard Symbols:</h4>
+                    <table>
+                        <tr>
+                            <th>Symbol</th>
+                            <th>Meaning</th>
+                            <th>Examples</th>
+                            <th>Precautions</th>
+                        </tr>
+                        <tr>
+                            <td>🔥</td>
+                            <td>Flammable</td>
+                            <td>Ethanol, acetone, ether</td>
+                            <td>Keep away from heat, sparks, open flames</td>
+                        </tr>
+                        <tr>
+                            <td>☣️</td>
+                            <td>Toxic</td>
+                            <td>Cyanides, mercury salts</td>
+                            <td>Use in fume hood, wear gloves, avoid inhalation</td>
+                        </tr>
+                        <tr>
+                            <td>⚠️</td>
+                            <td>Corrosive</td>
+                            <td>Strong acids (HCl, H₂SO₄), strong bases (NaOH)</td>
+                            <td>Wear gloves and goggles, handle with care</td>
+                        </tr>
+                        <tr>
+                            <td>💥</td>
+                            <td>Explosive</td>
+                            <td>Picric acid, peroxides</td>
+                            <td>Handle minimal quantities, store properly</td>
+                        </tr>
+                        <tr>
+                            <td>☢️</td>
+                            <td>Radioactive</td>
+                            <td>Radioisotopes</td>
+                            <td>Use shielding, monitor exposure, special disposal</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="topic-section">
+            <h2 class="topic-title">2. Basic Laboratory Techniques</h2>
+            <div class="topic-content">
+                <p>Mastery of basic laboratory techniques is essential for accurate and reproducible experimental results.</p>
+                
+                <div class="technique-box">
+                    <h4>Weighing Techniques:</h4>
+                    <ul>
+                        <li><strong>Using Analytical Balance:</strong>
+                            <ol>
+                                <li>Ensure balance is level and calibrated</li>
+                                <li>Tare (zero) the balance with weighing container</li>
+                                <li>Add substance to container using spatula</li>
+                                <li>Close balance doors during weighing for accurate readings</li>
+                                <li>Record mass to appropriate significant figures</li>
+                            </ol>
+                        </li>
+                        <li><strong>Weighing by Difference:</strong> Weigh container with substance, then weigh container after removing some substance; the difference is the mass transferred</li>
+                        <li><strong>Weighing Hygroscopic Substances:</strong> Weigh quickly in closed containers to prevent moisture absorption</li>
+                    </ul>
+                </div>
+                
+                <div class="technique-box">
+                    <h4>Volume Measurement Techniques:</h4>
+                    <ul>
+                        <li><strong>Using Graduated Cylinder:</strong>
+                            <ol>
+                                <li>Place cylinder on level surface</li>
+                                <li>Pour liquid to desired volume</li>
+                                <li>Read at bottom of meniscus at eye level</li>
+                                <li>Estimate between graduation marks for better precision</li>
+                            </ol>
+                        </li>
+                        <li><strong>Using Pipette:</strong>
+                            <ol>
+                                <li>Rinse pipette with solution to be measured</li>
+                                <li>Use pipette bulb to draw liquid above calibration mark</li>
+                                <li>Adjust meniscus to calibration mark by releasing pressure</li>
+                                <li>Deliver to receiving vessel with tip touching wall</li>
+                                <li>Wait for drainage (some pipettes require blowing out last drop)</li>
+                            </ol>
+                        </li>
+                        <li><strong>Using Burette:</strong>
+                            <ol>
+                                <li>Rinse burette with solution to be used</li>
+                                <li>Fill burette above zero mark</li>
+                                <li>Open stopcock to fill tip and remove air bubbles</li>
+                                <li>Adjust meniscus to zero or convenient starting point</li>
+                                <li>Read volume at eye level, estimating between marks</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="technique-box">
+                    <h4>Heating Techniques:</h4>
+                    <ul>
+                        <li><strong>Bunsen Burner Operation:</strong>
+                            <ul>
+                                <li>Check gas hose connections</li>
+                                <li>Open gas valve slightly</li>
+                                <li>Light with striker away from burner</li>
+                                <li>Adjust air intake for desired flame (yellow safety flame for standby, blue heating flame for work)</li>
+                                <li>Always turn off gas when not in use</li>
+                            </ul>
+                        </li>
+                        <li><strong>Heating Liquids:</strong>
+                            <ul>
+                                <li>Use proper container (beaker, flask, test tube)</li>
+                                <li>Never heat closed containers</li>
+                                <li>Stir liquids during heating to prevent bumping</li>
+                                <li>Use boiling chips for even boiling</li>
+                                <li>Direct flame at liquid, not container walls</li>
+                            </ul>
+                        </li>
+                        <li><strong>Hot Plate Usage:</strong> More controlled heating, especially for flammable liquids</li>
+                    </ul>
+                </div>
+                
+                <div class="technique-box">
+                    <h4>Filtration Techniques:</h4>
+                    <ul>
+                        <li><strong>Gravity Filtration:</strong> Slow but simple, using filter paper in funnel</li>
+                        <li><strong>Vacuum Filtration:</strong> Faster, using Büchner funnel and vacuum pump</li>
+                        <li><strong>Decantation:</strong> Pouring off liquid after solid settles</li>
+                        <li><strong>Filter Paper Selection:</strong> Choose appropriate pore size (qualitative vs. quantitative)</li>
+                    </ul>
+                </div>
+                
+                <div class="technique-box">
+                    <h4>Solution Preparation:</h4>
+                    <ul>
+                        <li><strong>Preparing Molar Solutions:</strong>
+                            <ol>
+                                <li>Calculate required mass of solute: mass = M × V × Molar Mass</li>
+                                <li>Weigh solute accurately</li>
+                                <li>Dissolve in less than final volume of solvent</li>
+                                <li>Transfer to volumetric flask</li>
+                                <li>Add solvent to calibration mark (meniscus at mark)</li>
+                                <li>Mix thoroughly by inversion</li>
+                            </ol>
+                        </li>
+                        <li><strong>Serial Dilution:</strong> Preparing a series of solutions of decreasing concentration</li>
+                        <li><strong>Standard Solutions:</strong> Solutions of precisely known concentration, used as references</li>
+                    </ul>
+                </div>
+                
+                <div class="tip">
+                    <h4>💡 Pro Tips for Accurate Measurements:</h4>
+                    <ul>
+                        <li>Always calibrate equipment before use</li>
+                        <li>Record measurements immediately to avoid memory errors</li>
+                        <li>Use appropriate significant figures based on equipment precision</li>
+                        <li>Repeat measurements for better accuracy and precision</li>
+                        <li>Keep laboratory notebook neat and organized with all data</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="topic-section">
+            <h2 class="topic-title">3. Qualitative Analysis</h2>
+            <div class="topic-content">
+                <p>Qualitative analysis involves identifying the components of a substance without necessarily determining their quantities.</p>
+                
+                <div class="experiment-box">
+                    <h4>Preliminary Tests:</h4>
+                    <ul>
+                        <li><strong>Physical Examination:</strong> Color, state (solid, liquid, gas), crystal structure, odor (waft, don't inhale directly)</li>
+                        <li><strong>Solubility Tests:</strong> Test solubility in water, acids, bases, organic solvents</li>
+                        <li><strong>Flame Tests:</strong> Identify metal ions by characteristic flame colors:
+                            <ul>
+                                <li>Na⁺: Bright yellow</li>
+                                <li>K⁺: Lilac (violet) through cobalt blue glass</li>
+                                <li>Ca²⁺: Brick red</li>
+                                <li>Ba²⁺: Apple green</li>
+                                <li>Cu²⁺: Blue-green</li>
+                                <li>Li⁺: Crimson red</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="experiment-box">
+                    <h4>Tests for Cations:</h4>
+                    <table>
+                        <tr>
+                            <th>Cation</th>
+                            <th>Test</th>
+                            <th>Observation</th>
+                        </tr>
+                        <tr>
+                            <td>Ammonium (NH₄⁺)</td>
+                            <td>Add NaOH, heat gently</td>
+                            <td>Pungent smell of NH₃, turns moist red litmus blue</td>
+                        </tr>
+                        <tr>
+                            <td>Lead (Pb²⁺)</td>
+                            <td>Add KI solution</td>
+                            <td>Yellow precipitate of PbI₂</td>
+                        </tr>
+                        <tr>
+                            <td>Silver (Ag⁺)</td>
+                            <td>Add HCl or NaCl solution</td>
+                            <td>White precipitate of AgCl, soluble in NH₃</td>
+                        </tr>
+                        <tr>
+                            <td>Copper (Cu²⁺)</td>
+                            <td>Add NH₃ solution</td>
+                            <td>Blue precipitate, then deep blue solution</td>
+                        </tr>
+                        <tr>
+                            <td>Iron(II) (Fe²⁺)</td>
+                            <td>Add potassium ferricyanide K₃[Fe(CN)₆]</td>
+                            <td>Dark blue precipitate (Turnbull's blue)</td>
+                        </tr>
+                        <tr>
+                            <td>Iron(III) (Fe³⁺)</td>
+                            <td>Add potassium ferrocyanide K₄[Fe(CN)₆]</td>
+                            <td>Deep blue precipitate (Prussian blue)</td>
+                        </tr>
+                        <tr>
+                            <td>Aluminum (Al³⁺)</td>
+                            <td>Add NaOH, then excess</td>
+                            <td>White gelatinous precipitate, soluble in excess NaOH</td>
+                        </tr>
+                        <tr>
+                            <td>Zinc (Zn²⁺)</td>
+                            <td>Add NaOH, then excess</td>
+                            <td>White precipitate, soluble in excess NaOH</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="experiment-box">
+                    <h4>Tests for Anions:</h4>
+                    <table>
+                        <tr>
+                            <th>Anion</th>
+                            <th>Test</th>
+                            <th>Observation</th>
+                        </tr>
+                        <tr>
+                            <td>Carbonate (CO₃²⁻)</td>
+                            <td>Add dilute acid</td>
+                            <td>Effervescence (CO₂ gas), turns limewater milky</td>
+                        </tr>
+                        <tr>
+                            <td>Sulfate (SO₄²⁻)</td>
+                            <td>Add BaCl₂ solution</td>
+                            <td>White precipitate of BaSO₄, insoluble in acids</td>
+                        </tr>
+                        <tr>
+                            <td>Chloride (Cl⁻)</td>
+                            <td>Add AgNO₃, then dilute HNO₃</td>
+                            <td>White precipitate of AgCl, insoluble in HNO₃</td>
+                        </tr>
+                        <tr>
+                            <td>Nitrate (NO₃⁻)</td>
+                            <td>Brown ring test (FeSO₄ + H₂SO₄)</td>
+                            <td>Brown ring at interface</td>
+                        </tr>
+                        <tr>
+                            <td>Sulfide (S²⁻)</td>
+                            <td>Add dilute acid</td>
+                            <td>Rotten egg smell of H₂S</td>
+                        </tr>
+                        <tr>
+                            <td>Phosphate (PO₄³⁻)</td>
+                            <td>Add ammonium molybdate + HNO₃, heat</td>
+                            <td>Yellow precipitate of ammonium phosphomolybdate</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="key-point">
+                    <h4>Systematic Analysis Scheme:</h4>
+                    <ol>
+                        <li><strong>Group I Cations (Ag⁺, Pb²⁺, Hg₂²⁺):</strong> Precipitated as chlorides by adding dilute HCl</li>
+                        <li><strong>Group II Cations (Hg²⁺, Pb²⁺, Bi³⁺, Cu²⁺, Cd²⁺):</strong> Precipitated as sulfides in acidic medium by H₂S</li>
+                        <li><strong>Group III Cations (Al³⁺, Cr³⁺, Fe³⁺):</strong> Precipitated as hydroxides by NH₄OH in presence of NH₄Cl</li>
+                        <li><strong>Group IV Cations (Zn²⁺, Mn²⁺, Ni²⁺, Co²⁺):</strong> Precipitated as sulfides in alkaline medium by H₂S</li>
+                        <li><strong>Group V Cations (Ba²⁺, Sr²⁺, Ca²⁺):</strong> Precipitated as carbonates by (NH₄)₂CO₃ in presence of NH₄Cl and NH₄OH</li>
+                        <li><strong>Group VI Cations (Mg²⁺, K⁺, Na⁺, NH₄⁺):</strong> Remain in solution, tested individually</li>
+                    </ol>
+                </div>
+                
+                <div class="procedure-box">
+                    <h4>Qualitative Analysis Procedure:</h4>
+                    <ol>
+                        <li>Prepare original solution (O.S.) of unknown sample</li>
+                        <li>Perform preliminary tests (physical, flame, solubility)</li>
+                        <li>Test for anions in separate portions of O.S.</li>
+                        <li>Systematically test for cations using group reagents</li>
+                        <li>Confirm each ion with specific tests</li>
+                        <li>Record all observations carefully in lab notebook</li>
+                        <li>Interpret results to identify compounds present</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="topic-section">
+            <h2 class="topic-title">4. Titration Techniques</h2>
+            <div class="topic-content">
+                <p>Titration is a quantitative analytical technique used to determine the concentration of an unknown solution by reacting it with a solution of known concentration.</p>
+                
+                <div class="experiment-box">
+                    <h4>Types of Titrations:</h4>
+                    <table>
+                        <tr>
+                            <th>Type</th>
+                            <th>Principle</th>
+                            <th>Indicator</th>
+                            <th>Example</th>
+                        </tr>
+                        <tr>
+                            <td>Acid-Base</td>
+                            <td>Neutralization reaction</td>
+                            <td>Phenolphthalein, methyl orange</td>
+                            <td>HCl vs NaOH</td>
+                        </tr>
+                        <tr>
+                            <td>Redox</td>
+                            <td>Electron transfer</td>
+                            <td>Self-indicating or starch (iodine)</td>
+                            <td>KMnO₄ vs Fe²⁺</td>
+                        </tr>
+                        <tr>
+                            <td>Complexometric</td>
+                            <td>Complex formation</td>
+                            <td>Eriochrome Black T, murexide</td>
+                            <td>EDTA vs Ca²⁺</td>
+                        </tr>
+                        <tr>
+                            <td>Precipitation</td>
+                            <td>Formation of precipitate</td>
+                            <td>Chromate (Mohr), adsorption</td>
+                            <td>AgNO₃ vs NaCl</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="procedure-box">
+                    <h4>Acid-Base Titration Procedure (HCl vs NaOH):</h4>
+                    <ol>
+                        <li><strong>Preparation:</strong>
+                            <ul>
+                                <li>Clean and rinse all glassware (burette, pipette, conical flask)</li>
+                                <li>Prepare standard NaOH solution (primary standard: potassium hydrogen phthalate)</li>
+                                <li>Prepare HCl solution of approximately known concentration</li>
+                                <li>Add 2-3 drops of phenolphthalein indicator to acid solution</li>
+                            </ul>
+                        </li>
+                        <li><strong>Titration:</strong>
+                            <ol>
+                                <li>Fill burette with NaOH solution, record initial reading</li>
+                                <li>Pipette 25.0 mL of HCl solution into clean conical flask</li>
+                                <li>Add NaOH from burette with continuous swirling</li>
+                                <li>Slow down addition near endpoint (color change persists longer)</li>
+                                <li>Stop when faint pink color persists for 30 seconds</li>
+                                <li>Record final burette reading</li>
+                            </ol>
+                        </li>
+                        <li><strong>Calculations:</strong>
+                            <ul>
+                                <li>Volume of NaOH used = Final reading - Initial reading</li>
+                                <li>M₁V₁ (NaOH) = M₂V₂ (HCl) at equivalence point</li>
+                                <li>Calculate concentration of HCl: M₂ = (M₁V₁)/V₂</li>
+                                <li>Repeat titration until consistent results (within 0.1 mL)</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                
+                <div class="procedure-box">
+                    <h4>Redox Titration (KMnO₄ vs Fe²⁺):</h4>
+                    <ol>
+                        <li><strong>Preparation:</strong>
+                            <ul>
+                                <li>Prepare standard KMnO₄ solution (needs standardization with oxalic acid)</li>
+                                <li>Prepare Fe²⁺ solution (usually FeSO₄ or (NH₄)₂Fe(SO₄)₂)</li>
+                                <li>Add dilute H₂SO₄ to provide acidic medium</li>
+                                <li>KMnO₄ is self-indicating (purple to colorless to faint pink)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Titration:</strong>
+                            <ol>
+                                <li>Fill burette with KMnO₄ solution</li>
+                                <li>Pipette Fe²⁺ solution into conical flask, add H₂SO₄</li>
+                                <li>Titrate with KMnO₄ until permanent faint pink color</li>
+                                <li>Initial slow addition, then faster as reaction proceeds</li>
+                                <li>Warm solution if reaction is slow at room temperature</li>
+                            </ol>
+                        </li>
+                        <li><strong>Calculations:</strong>
+                            <ul>
+                                <li>5Fe²⁺ + MnO₄⁻ + 8H⁺ → 5Fe³⁺ + Mn²⁺ + 4H₂O</li>
+                                <li>Mole ratio: 5 moles Fe²⁺ : 1 mole MnO₄⁻</li>
+                                <li>Calculate Fe²⁺ concentration from KMnO₄ volume and concentration</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                
+                <div class="key-point">
+                    <h4>Titration Errors and Precautions:</h4>
+                    <ul>
+                        <li><strong>Systematic Errors:</strong>
+                            <ul>
+                                <li>Incorrect calibration of glassware</li>
+                                <li>Impure reagents or standards</li>
+                                <li>Incorrect indicator choice or amount</li>
+                            </ul>
+                        </li>
+                        <li><strong>Random Errors:</strong>
+                            <ul>
+                                <li>Parallax error in reading burette</li>
+                                <li>Inconsistent endpoint detection</li>
+                                <li>Spills or splashes</li>
+                            </ul>
+                        </li>
+                        <li><strong>Precautions:</strong>
+                            <ul>
+                                <li>Rinse glassware with appropriate solutions</li>
+                                <li>Remove air bubbles from burette tip</li>
+                                <li>Read burette at eye level, estimate between marks</li>
+                                <li>Perform multiple titrations for accuracy</li>
+                                <li>Discard first titration (often less accurate)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="tip">
+                    <h4>💡 Titration Endpoint Tips:</h4>
+                    <ul>
+                        <li>For acid-base titrations, choose indicator with pKa near pH at equivalence point</li>
+                        <li>Practice detecting color changes with known solutions first</li>
+                        <li>Use white background to better observe color changes</li>
+                        <li>Add last drops slowly (dropwise) near endpoint</li>
+                        <li>Record volumes to 2 decimal places (0.01 mL precision for burette)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="topic-section">
+            <h2 class="topic-title">5. Physical Chemistry Experiments</h2>
+            <div class="topic-content">
+                <p>Physical chemistry experiments involve measurements of physical properties and their relationship to chemical composition and structure.</p>
+                
+                <div class="experiment-box">
+                    <h4>Determination of Melting Point:</h4>
+                    <ul>
+                        <li><strong>Purpose:</strong> Identify compounds and check purity</li>
+                        <li><strong>Apparatus:</strong> Melting point apparatus, capillary tubes, thermometer</li>
+                        <li><strong>Procedure:</strong>
+                            <ol>
+                                <li>Pack sample tightly in capillary tube (2-3 mm height)</li>
+                                <li>Attach to thermometer with rubber band</li>
+                                <li>Heat slowly (1-2°C/min) near expected melting point</li>
+                                <li>Record temperature when sample begins to melt and when completely melted</li>
+                                <li>Report as melting range</li>
+                            </ol>
+                        </li>
+                        <li><strong>Interpretation:</strong> Pure compounds have sharp melting point (1-2°C range); impurities lower and broaden melting range</li>
+                    </ul>
+                </div>
+                
+                <div class="experiment-box">
+                    <h4>Determination of Boiling Point:</h4>
+                    <ul>
+                        <li><strong>Purpose:</strong> Identify liquids and check purity</li>
+                        <li><strong>Apparatus:</strong> Distillation setup, thermometer, heating mantle</li>
+                        <li><strong>Procedure:</strong>
+                            <ol>
+                                <li>Set up simple distillation apparatus</li>
+                                <li>Add liquid to distillation flask with boiling chips</li>
+                                <li>Heat until steady distillation</li>
+                                <li>Record temperature when distillate begins to collect</li>
+                                <li>Continue recording as distillation proceeds</li>
+                            </ol>
+                        </li>
+                        <li><strong>Interpretation:</strong> Pure liquids have constant boiling point; mixtures distill over temperature range</li>
+                    </ul>
+                </div>
+                
+                <div class="experiment-box">
+                    <h4>pH Measurement and Buffer Preparation:</h4>
+                    <ul>
+                        <li><strong>pH Meter Calibration:</strong>
+                            <ol>
+                                <li>Use standard buffer solutions (pH 4, 7, 10)</li>
+                                <li>Rinse electrode with distilled water between measurements</li>
+                                <li>Calibrate using 2-point or 3-point calibration</li>
+                            </ol>
+                        </li>
+                        <li><strong>Buffer Preparation (Acetate Buffer pH 4.76):</strong>
+                            <ol>
+                                <li>Calculate amounts of acetic acid and sodium acetate</li>
+                                <li>Mix calculated volumes/concentrations</li>
+                                <li>Measure pH with calibrated pH meter</li>
+                                <li>Adjust with acid or base if necessary</li>
+                            </ol>
+                        </li>
+                        <li><strong>Buffer Capacity:</strong> Test by adding small amounts of acid/base and measuring pH change</li>
+                    </ul>
+                </div>
+                
+                <div class="experiment-box">
+                    <h4>Determination of Density:</h4>
+                    <ul>
+                        <li><strong>Liquid Density:</strong>
+                            <ol>
+                                <li>Weigh empty, dry pycnometer</li>
+                                <li>Fill with liquid, weigh again</li>
+                                <li>Calculate mass of liquid</li>
+                                <li>Density = mass/volume (know pycnometer volume)</li>
+                            </ol>
+                        </li>
+                        <li><strong>Solid Density:</strong>
+                            <ol>
+                                <li>Weigh solid</li>
+                                <li>Determine volume by displacement (graduated cylinder with water)</li>
+                                <li>Density = mass/volume</li>
+                            </ol>
+                        </li>
+                        <li><strong>Applications:</strong> Identify substances, determine concentration, check purity</li>
+                    </ul>
+                </div>
+                
+                <div class="experiment-box">
+                    <h4>Colorimetry and Beer-Lambert Law:</h4>
+                    <ul>
+                        <li><strong>Principle:</strong> A = εlc, where A = absorbance, ε = molar absorptivity, l = path length, c = concentration</li>
+                        <li><strong>Procedure:</strong>
+                            <ol>
+                                <li>Prepare standard solutions of known concentrations</li>
+                                <li>Measure absorbance at λmax using spectrophotometer</li>
+                                <li>Plot calibration curve (Absorbance vs Concentration)</li>
+                                <li>Measure absorbance of unknown, read concentration from curve</li>
+                            </ol>
+                        </li>
+                        <li><strong>Precautions:</strong>
+                            <ul>
+                                <li>Use clean, matched cuvettes</li>
+                                <li>Zero instrument with blank (solvent only)</li>
+                                <li>Work within linear range of Beer's Law</li>
+                                <li>Avoid fingerprints on cuvette optical surfaces</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="key-point">
+                    <h4>Data Recording and Report Writing:</h4>
+                    <ul>
+                        <li><strong>Laboratory Notebook:</strong>
+                            <ul>
+                                <li>Record date, experiment title, and objectives</li>
+                                <li>Write procedure in your own words</li>
+                                <li>Record all observations and measurements immediately</li>
+                                <li>Include calculations with proper units and significant figures</li>
+                                <li>Draw apparatus diagrams when helpful</li>
+                            </ul>
+                        </li>
+                        <li><strong>Laboratory Report:</strong>
+                            <ul>
+                                <li>Title, name, date, course information</li>
+                                <li>Abstract/Summary</li>
+                                <li>Introduction with theory</li>
+                                <li>Experimental procedure</li>
+                                <li>Results with tables, graphs, calculations</li>
+                                <li>Discussion of results, errors, and improvements</li>
+                                <li>Conclusion</li>
+                                <li>References</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to All Courses</a>
+            <a href="https://kvcbt.netlify.app" target="_blank" class="btn-cbt" style="margin-left: 20px;"><i class="fas fa-laptop-code"></i> Practice CBT</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo.jpg" alt="IE Summary Logo" class="footer-logo-img">
+                    <div>
+                        <h3>IE Summary</h3>
+                        <p>Immaculate Envilinks 100 Level Course Summary</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#courses">Courses</a></li>
+                        <li><a href="index.html#cbt">Practice CBT</a></li>
+                        <li><a href="index.html#resources">Video Tutorials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>For support or suggestions:</p>
+                    <a href="https://eimc.vercel.app/" target="_blank">Envilinks Interconnectivity Media Concept</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 IE Summary. Proudly designed by Envilinks Interconnectivity Media Concept.</p>
+                <p><a href="https://eimc.vercel.app/" target="_blank">https://eimc.vercel.app/</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

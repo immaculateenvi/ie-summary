@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHY 107 - IE Summary</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .course-page {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .course-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 30px;
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            border-radius: 10px;
+        }
+        
+        .course-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .course-code {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .back-btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-3px);
+        }
+        
+        .topic-section {
+            margin-bottom: 50px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .topic-title {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .topic-content {
+            line-height: 1.7;
+        }
+        
+        .topic-content p {
+            margin-bottom: 15px;
+        }
+        
+        .topic-content ul, .topic-content ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .topic-content li {
+            margin-bottom: 10px;
+        }
+        
+        .formula-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .formula {
+            font-family: 'Courier New', monospace;
+            font-size: 1.2rem;
+            margin: 10px 0;
+            color: #e74c3c;
+        }
+        
+        .key-point {
+            background-color: #e8f4fc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #3498db;
+        }
+        
+        .experiment-box {
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border: 1px solid #3498db;
+        }
+        
+        .safety-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .safety-item {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .apparatus-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .apparatus-item {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        
+        .experiment-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .experiment-table th, .experiment-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .experiment-table th {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .course-header h1 {
+                font-size: 2rem;
+            }
+            
+            .topic-section {
+                padding: 20px;
+            }
+            
+            .topic-title {
+                font-size: 1.5rem;
+            }
+            
+            .safety-list, .apparatus-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="logo.jpg" alt="IE Summary Logo" class="logo">
+                <h1>IE Summary</h1>
+                <p class="subtitle">Immaculate Envilinks 100 Level Course Summary</p>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="course-page">
+        <div class="course-header">
+            <h1>PHY 107: General Physics Practical I</h1>
+            <p class="course-code">Course Code: PHY 107</p>
+            <p>Laboratory experiments, measurements, data analysis, and scientific reporting</p>
+            <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to All Courses</a>
+        </div>
+
+        <div class="topic-section">
+            <h2 class="topic-title">1. Laboratory Safety and Equipment</h2>
+            <div class="topic-content">
+                <p>Safety is paramount in physics laboratories where equipment and experiments can pose hazards.</p>
+                
+                <div class="key-point">
+                    <h4>General Laboratory Safety Rules:</h4>
+                    <div class="safety-list">
+                        <div class="safety-item">
+                            <h5>Personal Protection</h5>
+                            <p>Wear lab coat, safety goggles, closed shoes</p>
+                        </div>
+                        <div class="safety-item">
+                            <h5>Electrical Safety</h5>
+                            <p>Check cords, avoid water near electricity</p>
+                        </div>
+                        <div class="safety-item">
+                            <h5>Chemical Safety</h5>
+                            <p>Handle chemicals carefully, know MSDS</p>
+                        </div>
+                        <div class="safety-item">
+                            <h5>Fire Safety</h5>
+                            <p>Know fire extinguisher locations and types</p>
+                        </div>
+                        <div class="safety-item">
+                            <h5>Equipment Safety</h5>
+                            <p>Use equipment only as instructed</p>
+                        </div>
+                        <div class="safety-item">
+                            <h5>Emergency Procedures</h5>
+                            <p>Know exits, first aid, emergency contacts</p>
+                        </div>
+                        <div class="safety-item">
+                            <h5>Cleanliness</h5>
+                            <p>Keep workspace clean, dispose waste properly</p>
+                        </div>
+                        <div class="safety-item">
+                            <h5>Supervision</h5>
+                            <p>Never work alone, follow instructor guidance</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="key-point">
+                    <h4>Common Physics Laboratory Equipment:</h4>
+                    <div class="apparatus-list">
+                        <div class="apparatus-item">
+                            <h5>Meter Rule</h5>
+                            <p>Length measurement (±0.1cm)</p>
+                        </div>
+                        <div class="apparatus-item">
+                            <h5>Vernier Calipers</h5>
+                            <p>Length, diameter (±0.01cm)</p>
+                        </div>
+                        <div class="apparatus-item">
+                            <h5>Micrometer Screw Gauge</h5>
+                            <p>Small lengths (±0.001cm)</p>
+                        </div>
+                        <div class="apparatus-item">
+                            <h5>Stopwatch</h5>
+                            <p>Time measurement (±0.1s)</p>
+                        </div>
+                        <div class="apparatus-item">
+                            <h5>Balance</h5>
+                            <p>Mass measurement (±0.01g)</p>
+                        </div>
+                        <div class="apparatus-item">
+                            <h5>Thermometer</h5>
+                            <p>Temperature (±0.1°C)</p>
+                        </div>
+                        <div class="apparatus-item">
+                            <h5>Spring Balance</h5>
+                            <p>Force measurement (±0.1N)</p>
+                        </div>
+                        <div class="apparatus-item">
+                            <h5>Optical Bench</h5>
+                            <p>Optics experiments</p>
+                        </div>
+                        <div class="apparatus-item">
+                            <h5>Power Supply</h5>
+                            <p>DC/AC voltage source</p>
+                        </div>
+                        <div class="apparatus-item">
+                            <h5>Multimeter</h5>
+                            <p>Voltage, current, resistance</p>
+                        </div>
+                        <div class="apparatus-item">
+                            <h5>Oscilloscope</h5>
+                            <p>Waveform visualization</p>
+                        </div>
+                        <div class="apparatus-item">
+                            <h5>Pendulum Bob</h5>
+                            <p>Simple pendulum experiments</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <p><strong>Using Measuring Instruments:</strong></p>
+                <ol>
+                    <li><strong>Meter Rule:</strong>
+                        <ul>
+                            <li>Read at eye level to avoid parallax error</li>
+                            <li>Note zero error if any</li>
+                            <li>Estimate to half of smallest division (0.05cm)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Vernier Calipers:</strong>
+                        <ul>
+                            <li>Main scale reading + vernier scale reading</li>
+                            <li>Least count = 1 MSD - 1 VSD (usually 0.01cm)</li>
+                            <li>Check for zero error before use</li>
+                        </ul>
+                    </li>
+                    <li><strong>Micrometer Screw Gauge:</strong>
+                        <ul>
+                            <li>Main scale reading + circular scale reading</li>
+                            <li>Least count = pitch/number of divisions (usually 0.001cm)</li>
+                            <li>Use ratchet to avoid over-tightening</li>
+                        </ul>
+                    </li>
+                    <li><strong>Stopwatch:</strong>
+                        <ul>
+                            <li>Start/stop at precise moments</li>
+                            <li>Consider human reaction time (±0.2s)</li>
+                            <li>Take multiple readings and average</li>
+                        </ul>
+                    </li>
+                </ol>
+                
+                <div class="experiment-box">
+                    <h4>Example: Using Vernier Calipers</h4>
+                    <p><strong>To measure diameter of a cylinder:</strong></p>
+                    <p>1. Close jaws on cylinder gently</p>
+                    <p>2. Read main scale just before zero of vernier: e.g., 2.3 cm</p>
+                    <p>3. Find vernier division that aligns with main scale: e.g., 7th division</p>
+                    <p>4. If least count = 0.01 cm, vernier reading = 7 × 0.01 = 0.07 cm</p>
+                    <p>5. Total reading = 2.3 + 0.07 = 2.37 cm</p>
+                    <p>6. Check zero error: if jaws closed, reading should be 0.00</p>
+                </div>
+                
+                <p><strong>Laboratory Notebook Guidelines:</strong></p>
+                <ul>
+                    <li>Use permanent ink (no pencil)</li>
+                    <li>Record date and experiment title</li>
+                    <li>Note apparatus and setup</li>
+                    <li>Record raw data immediately</li>
+                    <li>Do calculations in notebook</li>
+                    <li>Draw neat diagrams</li>
+                    <li>Never erase - cross out errors with single line</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="topic-section">
+            <h2 class="topic-title">2. Measurement and Error Analysis</h2>
+            <div class="topic-content">
+                <p>All measurements have uncertainty; understanding errors is crucial for interpreting results.</p>
+                
+                <div class="key-point">
+                    <h4>Types of Errors:</h4>
+                    <ul>
+                        <li><strong>Systematic Errors:</strong> Consistent, reproducible errors
+                            <ul>
+                                <li>Instrument error (faulty calibration)</li>
+                                <li>Parallax error (reading at angle)</li>
+                                <li>Zero error (instrument not zeroed)</li>
+                                <li>Environmental error (temperature, pressure)</li>
+                                <li>Personal error (consistent bias)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Random Errors:</strong> Unpredictable variations
+                            <ul>
+                                <li>Fluctuations in readings</li>
+                                <li>Human reaction time</li>
+                                <li>Environmental fluctuations</li>
+                            </ul>
+                        </li>
+                        <li><strong>Gross Errors:</strong> Mistakes or blunders
+                            <ul>
+                                <li>Reading wrong scale</li>
+                                <li>Recording data incorrectly</li>
+                                <li>Using wrong formula</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="formula-box">
+                    <h4>Error Terminology:</h4>
+                    <p class="formula">Absolute Error: Δx = |Measured value - True value|</p>
+                    <p class="formula">Relative Error: (Δx/True value) × 100%</p>
+                    <p class="formula">Percentage Error: Relative error × 100%</p>
+                    <p class="formula">Mean Absolute Error: (Σ|Δxᵢ|)/n</p>
+                </div>
+                
+                <div class="key-point">
+                    <h4>Precision vs. Accuracy:</h4>
+                    <ul>
+                        <li><strong>Accuracy:</strong> Closeness to true value (affected by systematic errors)</li>
+                        <li><strong>Precision:</strong> Reproducibility of measurements (affected by random errors)</li>
+                        <li>High accuracy, high precision: Ideal</li>
+                        <li>High accuracy, low precision: Average close to true but scattered</li>
+                        <li>Low accuracy, high precision: Consistent but wrong</li>
+                        <li>Low accuracy, low precision: Poor measurements</li>
+                    </ul>
+                </div>
+                
+                <div class="experiment-box">
+                    <h4>Example: Error Calculation</h4>
+                    <p>Measure length of rod 5 times: 10.2, 10.4, 10.3, 10.5, 10.2 cm</p>
+                    <p>True value = 10.35 cm (from more precise measurement)</p>
+                    <p>Mean = (10.2+10.4+10.3+10.5+10.2)/5 = 51.6/5 = 10.32 cm</p>
+                    <p>Absolute errors: |10.2-10.35|=0.15, |10.4-10.35|=0.05, |10.3-10.35|=0.05, |10.5-10.35|=0.15, |10.2-10.35|=0.15</p>
+                    <p>Mean absolute error = (0.15+0.05+0.05+0.15+0.15)/5 = 0.55/5 = 0.11 cm</p>
+                    <p>Relative error = 0.11/10.35 = 0.0106 = 1.06%</p>
+                    <p>Result: Length = 10.32 ± 0.11 cm (or 10.32 cm ± 1.06%)</p>
+                </div>
+                
+                <div class="formula-box">
+                    <h4>Propagation of Errors:</h4>
+                    <p>For Q = x ± y: ΔQ = Δx + Δy</p>
+                    <p>For Q = xy or Q = x/y: (ΔQ/Q) = (Δx/x) + (Δy/y)</p>
+                    <p>For Q = xⁿ: (ΔQ/Q) = n(Δx/x)</p>
+                    <p>For Q = kx (k constant): ΔQ = kΔx</p>
+                </div>
+                
+                <div class="experiment-box">
+                    <h4>Example: Error Propagation</h4>
+                    <p>Calculate volume of cylinder: V = πr²h</p>
+                    <p>r = 2.0 ± 0.1 cm, h = 5.0 ± 0.2 cm</p>
+                    <p>Nominal volume: V = π×(2.0)²×5.0 = π×4×5 = 20π ≈ 62.83 cm³</p>
+                    <p>Relative error in r: Δr/r = 0.1/2.0 = 0.05 = 5%</p>
+                    <p>Since r² term: error contribution = 2×5% = 10%</p>
+                    <p>Relative error in h: Δh/h = 0.2/5.0 = 0.04 = 4%</p>
+                    <p>Total relative error: 10% + 4% = 14%</p>
+                    <p>Absolute error: ΔV = 0.14×62.83 = 8.80 cm³</p>
+                    <p>Result: V = 62.8 ± 8.8 cm³ or 62.8 cm³ ± 14%</p>
+                </div>
+                
+                <p><strong>Significant Figures in Calculations:</strong></p>
+                <ul>
+                    <li>Addition/Subtraction: Round to least precise decimal place</li>
+                    <li>Multiplication/Division: Result has same sig figs as factor with fewest sig figs</li>
+                    <li>Constants (π, e, etc.): Use one more sig fig than measurements</li>
+                    <li>Logarithms: Number of decimals in result = sig figs in argument</li>
+                </ul>
+                
+                <div class="key-point">
+                    <h4>Graphical Analysis:</h4>
+                    <ul>
+                        <li>Plot independent variable on x-axis, dependent on y-axis</li>
+                        <li>Choose appropriate scale to use most of graph paper</li>
+                        <li>Label axes with quantities and units</li>
+                        <li>Draw best-fit line (not necessarily through all points)</li>
+                        <li>Determine slope and intercept with uncertainties</li>
+                        <li>Use error bars when uncertainties are known</li>
+                    </ul>
+                </div>
+                
+                <div class="formula-box">
+                    <h4>Slope Calculation from Graph:</h4>
+                    <p class="formula">Slope (m) = Δy/Δx = (y₂ - y₁)/(x₂ - x₁)</p>
+                    <p>Choose points far apart on best-fit line, not data points</p>
+                    <p>Units of slope = (y-units)/(x-units)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="topic-section">
+            <h2 class="topic-title">3. Common Physics Experiments</h2>
+            <div class="topic-content">
+                <p>Typical first-year physics experiments cover mechanics, properties of matter, and basic measurements.</p>
+                
+                <div class="experiment-box">
+                    <h4>Experiment 1: Simple Pendulum</h4>
+                    <p><strong>Aim:</strong> Determine acceleration due to gravity (g) using simple pendulum.</p>
+                    <p><strong>Apparatus:</strong> Pendulum bob, string, retort stand, stopwatch, meter rule</p>
+                    <p><strong>Theory:</strong> Period T = 2π√(L/g) where L = effective length</p>
+                    <p><strong>Procedure:</strong></p>
+                    <ol>
+                        <li>Set up pendulum with known length L</li>
+                        <li>Displace slightly (angle &lt; 10°) and release</li>
+                        <li>Time 20 oscillations, calculate period T = t/20</li>
+                        <li>Repeat for different lengths</li>
+                        <li>Plot T² vs L, slope = 4π²/g</li>
+                    </ol>
+                    <p><strong>Calculations:</strong> g = 4π² × (L/T²) = 4π²/slope</p>
+                    <p><strong>Precautions:</strong> Small amplitude, count oscillations from equilibrium, avoid air currents</p>
+                </div>
+                
+                <div class="experiment-box">
+                    <h4>Experiment 2: Young's Modulus by Searle's Method</h4>
+                    <p><strong>Aim:</strong> Determine Young's modulus of a material.</p>
+                    <p><strong>Apparatus:</strong> Two identical wires, micrometer, weights, vernier scale, meter rule</p>
+                    <p><strong>Theory:</strong> Y = (FL)/(AΔL) where A = πr²</p>
+                    <p><strong>Procedure:</strong></p>
+                    <ol>
+                        <li>Measure diameter of wire at several points</li>
+                        <li>Set up apparatus with reference wire and experimental wire</li>
+                        <li>Add weights in equal increments</li>
+                        <li>Measure extension using vernier arrangement</li>
+                        <li>Plot extension vs load, slope = L/(YA)</li>
+                    </ol>
+                    <p><strong>Calculations:</strong> Y = L/(A × slope)</p>
+                    <p><strong>Precautions:</strong> Avoid parallax, add/remove weights gently, wait for steady reading</p>
+                </div>
+                
+                <div class="experiment-box">
+                    <h4>Experiment 3: Coefficient of Viscosity by Poiseuille's Method</h4>
+                    <p><strong>Aim:</strong> Determine viscosity of liquid using capillary flow.</p>
+                    <p><strong>Apparatus:</strong> Capillary tube, measuring cylinder, stopwatch, traveling microscope</p>
+                    <p><strong>Theory:</strong> η = (πr⁴ρght)/(8VL) for constant head</p>
+                    <p><strong>Procedure:</strong></p>
+                    <ol>
+                        <li>Measure radius of capillary using traveling microscope</li>
+                        <li>Set up constant head apparatus</li>
+                        <li>Collect volume V of liquid in time t</li>
+                        <li>Repeat for different heads</li>
+                        <li>Plot V/t vs h, slope gives η</li>
+                    </ol>
+                    <p><strong>Calculations:</strong> η = (πr⁴ρg)/(8L) × (h/(V/t))</p>
+                    <p><strong>Precautions:</strong> Ensure laminar flow, constant temperature, clean capillary</p>
+                </div>
+                
+                <div class="experiment-box">
+                    <h4>Experiment 4: Surface Tension by Capillary Rise Method</h4>
+                    <p><strong>Aim:</strong> Determine surface tension of liquid.</p>
+                    <p><strong>Apparatus:</strong> Capillary tubes, traveling microscope, beaker, liquid</p>
+                    <p><strong>Theory:</strong> γ = (ρgrh)/(2cosθ), for water θ≈0° so γ = ρgrh/2</p>
+                    <p><strong>Procedure:</strong></p>
+                    <ol>
+                        <li>Clean and dry capillary tube</li>
+                        <li>Insert vertically into liquid</li>
+                        <li>Measure height of rise h using traveling microscope</li>
+                        <li>Measure radius r of capillary</li>
+                        <li>Repeat with different capillaries</li>
+                    </ol>
+                    <p><strong>Calculations:</strong> γ = (ρgrh)/2</p>
+                    <p><strong>Precautions:</strong> Clean tube thoroughly, vertical alignment, measure from meniscus bottom</p>
+                </div>
+                
+                <div class="experiment-box">
+                    <h4>Experiment 5: Moment of Inertia of Flywheel</h4>
+                    <p><strong>Aim:</strong> Determine moment of inertia of flywheel.</p>
+                    <p><strong>Apparatus:</strong> Flywheel, string, weights, stopwatch, meter rule</p>
+                    <p><strong>Theory:</strong> I = [mgr²t²/(4π²N)] - mr² where N = number of rotations</p>
+                    <p><strong>Procedure:</strong></p>
+                    <ol>
+                        <li>Wrap string around axle, attach mass m</li>
+                        <li>Release mass, count rotations N until string unwinds</li>
+                        <li>Time the fall t</li>
+                        <li>Repeat for different masses</li>
+                        <li>Plot t² vs 1/m, slope gives I</li>
+                    </ol>
+                    <p><strong>Calculations:</strong> I = (mgr²t²)/(4π²N) - mr²</p>
+                    <p><strong>Precautions:</strong> Smooth release, count rotations accurately, minimize friction</p>
+                </div>
+                
+                <div class="key-point">
+                    <h4>Data Recording Table Example:</h4>
+                    <table class="experiment-table">
+                        <tr>
+                            <th>Length L (cm)</th>
+                            <th>Time for 20 oscillations t (s)</th>
+                            <th>Period T = t/20 (s)</th>
+                            <th>T² (s²)</th>
+                        </tr>
+                        <tr>
+                            <td>40.0</td>
+                            <td>25.4</td>
+                            <td>1.27</td>
+                            <td>1.61</td>
+                        </tr>
+                        <tr>
+                            <td>50.0</td>
+                            <td>28.4</td>
+                            <td>1.42</td>
+                            <td>2.02</td>
+                        </tr>
+                        <tr>
+                            <td>60.0</td>
+                            <td>31.2</td>
+                            <td>1.56</td>
+                            <td>2.43</td>
+                        </tr>
+                        <tr>
+                            <td>70.0</td>
+                            <td>33.6</td>
+                            <td>1.68</td>
+                            <td>2.82</td>
+                        </tr>
+                        <tr>
+                            <td>80.0</td>
+                            <td>35.9</td>
+                            <td>1.80</td>
+                            <td>3.24</td>
+                        </tr>
+                    </table>
+                    <p>Plot T² vs L, slope = 0.0405 s²/cm = 4.05 s²/m</p>
+                    <p>g = 4π²/slope = 39.48/4.05 = 9.75 m/s²</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="topic-section">
+            <h2 class="topic-title">4. Experimental Design and Procedure</h2>
+            <div class="topic-content">
+                <p>Well-designed experiments yield reliable results and minimize errors.</p>
+                
+                <div class="key-point">
+                    <h4>Steps in Experimental Design:</h4>
+                    <ol>
+                        <li><strong>Define Objective:</strong> What are you trying to measure or verify?</li>
+                        <li><strong>Review Theory:</strong> Understand physical principles involved</li>
+                        <li><strong>Select Apparatus:</strong> Choose appropriate measuring instruments</li>
+                        <li><strong>Design Procedure:</strong> Step-by-step method for data collection</li>
+                        <li><strong>Identify Variables:</strong>
+                            <ul>
+                                <li>Independent: What you change</li>
+                                <li>Dependent: What you measure</li>
+                                <li>Controlled: Keep constant</li>
+                            </ul>
+                        </li>
+                        <li><strong>Determine Data Range:</strong> How many measurements, what range</li>
+                        <li><strong>Plan Data Analysis:</strong> How to process and interpret data</li>
+                        <li><strong>Consider Safety:</strong> Identify potential hazards</li>
+                    </ol>
+                </div>
+                
+                <p><strong>Good Experimental Practice:</strong></p>
+                <ul>
+                    <li><strong>Calibration:</strong> Check instruments against standards</li>
+                    <li><strong>Replication:</strong> Take multiple readings</li>
+                    <li><strong>Randomization:</strong> Vary order of measurements</li>
+                    <li><strong>Control:</strong> Keep extraneous variables constant</li>
+                    <li><strong>Blinding:</strong> When possible, avoid bias</li>
+                </ul>
+                
+                <div class="experiment-box">
+                    <h4>Example: Designing Hooke's Law Experiment</h4>
+                    <p><strong>Objective:</strong> Verify Hooke's law and determine spring constant</p>
+                    <p><strong>Apparatus:</strong> Spring, masses, meter rule, retort stand</p>
+                    <p><strong>Variables:</strong></p>
+                    <ul>
+                        <li>Independent: Mass (or force F = mg)</li>
+                        <li>Dependent: Extension x</li>
+                        <li>Controlled: Same spring, same temperature, vertical orientation</li>
+                    </ul>
+                    <p><strong>Procedure:</strong></p>
+                    <ol>
+                        <li>Measure original length L₀ of spring</li>
+                        <li>Add mass m, measure new length L</li>
+                        <li>Calculate extension x = L - L₀</li>
+                        <li>Repeat for different masses</li>
+                        <li>Plot F vs x, should be straight line through origin</li>
+                        <li>Slope = spring constant k</li>
+                    </ol>
+                    <p><strong>Precautions:</strong> Add masses gently, wait for oscillations to stop, measure at eye level</p>
+                </div>
+                
+                <p><strong>Minimizing Specific Errors:</strong></p>
+                <table class="experiment-table">
+                    <tr>
+                        <th>Error Type</th>
+                        <th>Minimization Strategy</th>
+                    </tr>
+                    <tr>
+                        <td>Parallax Error</td>
+                        <td>Read at eye level, use mirror scales</td>
+                    </tr>
+                    <tr>
+                        <td>Zero Error</td>
+                        <td>Check zero before use, apply correction</td>
+                    </tr>
+                    <tr>
+                        <td>Backlash Error</td>
+                        <td>Always approach measurement from same direction</td>
+                    </tr>
+                    <tr>
+                        <td>Human Reaction Time</td>
+                        <td>Use automatic timers, take multiple readings</td>
+                    </tr>
+                    <tr>
+                        <td>Temperature Effects</td>
+                        <td>Work in controlled environment, allow thermal equilibrium</td>
+                    </tr>
+                    <tr>
+                        <td>Instrument Resolution</td>
+                        <td>Use appropriate instrument for required precision</td>
+                    </tr>
+                </table>
+                
+                <div class="key-point">
+                    <h4>Taking Measurements:</h4>
+                    <ul>
+                        <li>Record all digits from instrument (including estimated digit)</li>
+                        <li>Note units for every measurement</li>
+                        <li>Record environmental conditions (temperature, pressure if relevant)</li>
+                        <li>Note any unusual observations during experiment</li>
+                        <li>Record raw data before any calculations</li>
+                    </ul>
+                </div>
+                
+                <p><strong>Range and Number of Measurements:</strong></p>
+                <ul>
+                    <li>Choose range that covers expected behavior</li>
+                    <li>Include enough points to establish trend (minimum 5-6)</li>
+                    <li>Space measurements evenly over range</li>
+                    <li>Take multiple readings at each setting (3-5 for random error reduction)</li>
+                    <li>More measurements improve precision but consider time constraints</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="topic-section">
+            <h2 class="topic-title">5. Data Analysis and Report Writing</h2>
+            <div class="topic-content">
+                <p>Proper data analysis and clear reporting are essential components of experimental physics.</p>
+                
+                <div class="key-point">
+                    <h4>Steps in Data Analysis:</h4>
+                    <ol>
+                        <li><strong>Organize Data:</strong> Tabulate in logical format</li>
+                        <li><strong>Calculate Derived Quantities:</strong> Compute means, standard deviations</li>
+                        <li><strong>Graphical Analysis:</strong> Plot appropriate graphs</li>
+                        <li><strong>Determine Parameters:</strong> Calculate slopes, intercepts, constants</li>
+                        <li><strong>Error Analysis:</strong> Calculate uncertainties in final results</li>
+                        <li><strong>Compare with Theory:</strong> Check consistency with expected values</li>
+                        <li><strong>Draw Conclusions:</strong> Interpret results in context of objectives</li>
+                    </ol>
+                </div>
+                
+                <div class="formula-box">
+                    <h4>Statistical Measures:</h4>
+                    <p class="formula">Mean: x̄ = (Σxᵢ)/n</p>
+                    <p class="formula">Standard Deviation: σ = √[Σ(xᵢ - x̄)²/(n-1)]</p>
+                    <p class="formula">Standard Error of Mean: SE = σ/√n</p>
+                    <p class="formula">Percentage Difference: |Experimental - Theoretical|/Theoretical × 100%</p>
+                </div>
+                
+                <div class="key-point">
+                    <h4>Laboratory Report Structure:</h4>
+                    <ol>
+                        <li><strong>Title:</strong> Clearly describes experiment</li>
+                        <li><strong>Objective/Aim:</strong> What you set out to accomplish</li>
+                        <li><strong>Theory:</strong> Relevant principles, formulas, derivations</li>
+                        <li><strong>Apparatus:</strong> List of equipment used</li>
+                        <li><strong>Procedure:</strong> Step-by-step description of method</li>
+                        <li><strong>Observations/Data:</strong> Raw data in organized tables</li>
+                        <li><strong>Calculations:</strong> Sample calculations, graphs</li>
+                        <li><strong>Results:</strong> Final values with uncertainties</li>
+                        <li><strong>Discussion:</strong> Interpretation, error sources, improvements</li>
+                        <li><strong>Conclusion:</strong> Summary of findings</li>
+                        <li><strong>References:</strong> Sources cited</li>
+                        <li><strong>Appendices:</strong> Additional details if needed</li>
+                    </ol>
+                </div>
+                
+                <div class="experiment-box">
+                    <h4>Example: Simple Pendulum Report Section</h4>
+                    <p><strong>Results:</strong></p>
+                    <p>From graph of T² vs L, slope = 4.05 ± 0.05 s²/m</p>
+                    <p>g = 4π²/slope = 39.48/4.05 = 9.75 m/s²</p>
+                    <p>Uncertainty: Δg/g = Δslope/slope = 0.05/4.05 = 0.0123</p>
+                    <p>Δg = 0.0123 × 9.75 = 0.12 m/s²</p>
+                    <p>Final result: g = 9.75 ± 0.12 m/s²</p>
+                    <p>Accepted value: g = 9.81 m/s²</p>
+                    <p>Percentage difference: |9.75-9.81|/9.81 × 100% = 0.61%</p>
+                    <p><strong>Discussion:</strong></p>
+                    <p>The measured value agrees well with accepted value (0.61% difference). Main error sources: human reaction time in timing oscillations (±0.2s over 20 oscillations gives ~1% error), small amplitude approximation, air resistance. Improvement: Use photogate timer for more precise timing, conduct in vacuum to eliminate air resistance.</p>
+                </div>
+                
+                <p><strong>Graph Drawing Guidelines:</strong></p>
+                <ol>
+                    <li>Use graph paper or plotting software</li>
+                    <li>Choose scales that use most of paper (avoid tiny graphs)</li>
+                    <li>Label axes with quantity and units (e.g., "Length L (cm)")</li>
+                    <4>Mark data points clearly (use × or •)</li>
+                    <li>Draw best-fit line (not connect-the-dots)</li>
+                    <li>Include error bars if uncertainties known</li>
+                    <li>Calculate slope using points on line, not data points</li>
+                    <li>Include title/caption explaining graph</li>
+                </ol>
+                
+                <div class="key-point">
+                    <h4>Interpreting Results:</h4>
+                    <ul>
+                        <li>Compare with accepted/theoretical values</li>
+                        <li>Consider magnitude of uncertainty</li>
+                        <li>Identify systematic errors if results consistently off</li>
+                        <li>Note limitations of experiment</li>
+                        <li>Suggest improvements for future experiments</li>
+                        <li>Relate findings to theoretical principles</li>
+                    </ul>
+                </div>
+                
+                <p><strong>Common Mistakes to Avoid:</strong></p>
+                <ul>
+                    <li>Forgetting units in measurements and results</li>
+                    <li>Incorrect significant figures in final answers</li>
+                    <li>Not propagating errors through calculations</li>
+                    <li>Drawing conclusions not supported by data</li>
+                    <li>Poor graph presentation (unlabeled axes, wrong scales)</li>
+                    <li>Incomplete procedure description</li>
+                    <li>Ignoring obvious outliers without justification</li>
+                </ul>
+                
+                <div class="key-point">
+                    <h4>Verification of Laws:</h4>
+                    <p>When asked to "verify" a law (e.g., Hooke's law, Boyle's law):</p>
+                    <ol>
+                        <li>State the law mathematically</li>
+                        <li>Design experiment to test relationship</li>
+                        <li>Collect data for relevant variables</li>
+                        <li>Plot appropriate graph that should be linear if law holds</li>
+                        <li>Check linearity and proportionality constant</li>
+                        <li>Comment on deviations from expected behavior</li>
+                        <li>Conclude whether data supports the law within experimental uncertainty</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to All Courses</a>
+            <a href="https://kvcbt.netlify.app" target="_blank" class="btn-cbt" style="margin-left: 20px;"><i class="fas fa-laptop-code"></i> Practice CBT</a>
+        </div>
+    </main>
+
+        <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo.jpg" alt="IE Summary Logo" class="footer-logo-img">
+                    <div>
+                        <h3>IE Summary</h3>
+                        <p>Immaculate Envilinks 100 Level Course Summary</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#courses">Courses</a></li>
+                        <li><a href="index.html#cbt">Practice CBT</a></li>
+                        <li><a href="index.html#resources">Video Tutorials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>For support or suggestions:</p>
+                    <a href="https://eimc.vercel.app/" target="_blank">Envilinks Interconnectivity Media Concept</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 IE Summary. Proudly designed by Envilinks Interconnectivity Media Concept.</p>
+                <p><a href="https://eimc.vercel.app/" target="_blank">https://eimc.vercel.app/</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

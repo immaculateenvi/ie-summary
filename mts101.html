@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTS 101 - Elementary Mathematics I | IE Summary</title>
+    <link rel="stylesheet" href="summary-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo-area">
+            <img src="logo.jpg" alt="Logo" class="logo-img" onerror="this.src='https://placehold.co/45x45?text=IE'">
+            <span>IE Summary</span>
+        </div>
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back</a>
+    </div>
+    <div class="container">
+        <div class="hero">
+            <h1>📐 MTS 101: Elementary Mathematics I</h1>
+            <p>Set Theory | Induction | Sequences | Quadratic Equations | Binomial Theorem | Trigonometry</p>
+        </div>
+
+        <div class="topic">
+            <h2><i class="fas fa-shapes"></i> Set Theory</h2>
+            <p><strong>Union:</strong> A ∪ B = {x | x∈A or x∈B}<br>
+            <strong>Intersection:</strong> A ∩ B = {x | x∈A and x∈B}<br>
+            <strong>Complement:</strong> A' = {x | x∉A}<br>
+            <strong>Formula:</strong> n(A∪B) = n(A) + n(B) - n(A∩B)</p>
+            <div class="key">Example: 50 students, 30 Math, 25 Physics, 10 both → neither = 50 - (30+25-10) = 5</div>
+        </div>
+
+        <div class="topic">
+            <h2><i class="fas fa-arrow-right"></i> Mathematical Induction</h2>
+            <p>1. Base case (n=1) &nbsp; 2. Assume P(k) true &nbsp; 3. Prove P(k+1)</p>
+            <div class="key">Sum of first n numbers: 1+2+...+n = n(n+1)/2</div>
+        </div>
+
+        <div class="topic">
+            <h2><i class="fas fa-chart-line"></i> Sequences & Series</h2>
+            <p><strong>Arithmetic:</strong> aₙ = a₁ + (n-1)d, Sₙ = n/2[2a₁ + (n-1)d]<br>
+            <strong>Geometric:</strong> aₙ = a₁·rⁿ⁻¹, Sₙ = a₁(1-rⁿ)/(1-r), S∞ = a₁/(1-r) (|r|<1)</p>
+        </div>
+
+        <div class="topic">
+            <h2><i class="fas fa-square-root-alt"></i> Quadratic Equations</h2>
+            <p>ax² + bx + c = 0 → x = [-b ± √(b²-4ac)]/2a<br>
+            <strong>Discriminant:</strong> D = b²-4ac<br>
+            D>0: 2 real roots, D=0: 1 root, D<0: complex roots<br>
+            <strong>Sum of roots:</strong> α+β = -b/a, <strong>Product:</strong> αβ = c/a</p>
+        </div>
+
+        <div class="topic">
+            <h2><i class="fas fa-calculator"></i> Binomial Theorem</h2>
+            <p>(x + y)ⁿ = Σ ᵑCₖ xⁿ⁻ᵏ yᵏ, where ᵑCₖ = n!/(k!(n-k)!)<br>
+            <strong>Properties:</strong> ᵑCₖ = ᵑCₙ₋ₖ, ΣᵑCₖ = 2ⁿ</p>
+        </div>
+
+        <div class="topic">
+            <h2><i class="fas fa-draw-polygon"></i> Trigonometry</h2>
+            <p>sin²θ + cos²θ = 1, 1 + tan²θ = sec²θ<br>
+            sin(A±B) = sinA cosB ± cosA sinB<br>
+            sin2θ = 2 sinθ cosθ, cos2θ = cos²θ - sin²θ<br>
+            <strong>Sine rule:</strong> a/sinA = b/sinB = c/sinC<br>
+            <strong>Cosine rule:</strong> a² = b² + c² - 2bc cosA</p>
+        </div>
+    </div>
+    <footer><p>© 2026 IE Summary | <a href="https://eimc.vercel.app" target="_blank" style="color:#e67e22;">Envilinks</a></p></footer>
+</body>
+</html>

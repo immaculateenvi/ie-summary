@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>IE Summary | Immaculate Envilinks</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* ========== GLOBAL RESET & VARIABLES ========== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f7fc;
+      color: #1e2f3e;
+      line-height: 1.5;
+    }
+
+    :root {
+      --primary-navy: #0a2540;
+      --primary-mid: #1c4e6f;
+      --accent-sand: #e9c46a;
+      --accent-terra: #e76f51;
+      --bg-soft: #fefcf5;
+      --card-white: #ffffff;
+      --shadow-sm: 0 8px 20px rgba(0, 0, 0, 0.03), 0 2px 4px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 12px 28px -8px rgba(0, 0, 0, 0.08);
+      --radius-card: 1.5rem;
+      --radius-btn: 60px;
+    }
+
+    /* ========== HEADER & NAV (IE PLUS STYLE) ========== */
+    .site-header {
+      background: white;
+      backdrop-filter: blur(0px);
+      border-bottom: 1px solid #e2edf2;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.98);
+    }
+
+    .container-wide {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.8rem;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 0.9rem 0;
+      gap: 1rem;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .logo-img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--accent-sand);
+    }
+
+    .logo-text h2 {
+      font-size: 1.55rem;
+      font-weight: 700;
+      background: linear-gradient(125deg, #0a5c4b, #e76f51);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: -0.3px;
+    }
+
+    .logo-text p {
+      font-size: 0.7rem;
+      color: #5e7c8c;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #2c5f6e;
+      transition: 0.2s;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-terra);
+    }
+
+    .badge-status {
+      background: #e2f0e8;
+      padding: 6px 14px;
+      border-radius: 60px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #1f6e4a;
+    }
+
+    /* ========== HERO SECTION ========== */
+    .hero-main {
+      background: linear-gradient(102deg, #fff9ef 0%, #eef3f0 100%);
+      padding: 2rem 1rem 2rem;
+      text-align: center;
+      border-bottom: 1px solid #e2eae5;
+    }
+
+    .hero-main h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #1f5343;
+    }
+
+    .hero-main p {
+      max-width: 620px;
+      margin: 0.8rem auto 0;
+      color: #4d6f62;
+    }
+
+    /* ========== ACCORDION / EXPANDABLE SEMESTER GROUPS ========== */
+    .courses-accordion {
+      margin: 2.5rem auto;
+    }
+
+    .semester-group {
+      background: white;
+      border-radius: 28px;
+      margin-bottom: 1.25rem;
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      transition: all 0.2s;
+      border: 1px solid #e9f0ec;
+    }
+
+    .group-header {
+      background: white;
+      padding: 1.2rem 1.8rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.2s;
+      user-select: none;
+    }
+
+    .group-header:hover {
+      background: #fefaf3;
+    }
+
+    .group-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: #1f4e3f;
+    }
+
+    .group-title i {
+      font-size: 1.5rem;
+      color: var(--accent-terra);
+    }
+
+    .group-badge {
+      background: #deeae4;
+      padding: 4px 12px;
+      border-radius: 40px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #226653;
+    }
+
+    .toggle-icon {
+      font-size: 1.3rem;
+      color: #c0ab7a;
+      transition: transform 0.3s;
+    }
+
+    .group-courses {
+      padding: 0 1.5rem 1.5rem 1.5rem;
+      display: none;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 1.2rem;
+      border-top: 1px solid #f0f3ef;
+      background: #fefefb;
+    }
+
+    .semester-group.open .group-courses {
+      display: grid;
+    }
+
+    .semester-group.open .toggle-icon {
+      transform: rotate(180deg);
+    }
+
+    /* course card */
+    .course-card {
+      background: var(--card-white);
+      border-radius: 20px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: 1px solid #ecf3ee;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .course-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 28px -10px rgba(0, 0, 0, 0.1);
+      border-color: #d3e2d9;
+    }
+
+    .card-header {
+      padding: 1.2rem 1.2rem 0.2rem;
+    }
+
+    .code-badge {
+      background: #eef1e9;
+      border-radius: 40px;
+      padding: 0.2rem 0.9rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #2c6b52;
+      display: inline-block;
+    }
+
+    .card-header h3 {
+      font-size: 1.3rem;
+      margin: 0.6rem 0 0.25rem;
+      font-weight: 700;
+      color: #1f3e34;
+    }
+
+    .card-body {
+      padding: 0 1.2rem 0.8rem;
+      min-height: 70px;
+    }
+
+    .card-body p {
+      color: #5c6f66;
+      font-size: 0.8rem;
+      line-height: 1.4;
+    }
+
+    .card-footer {
+      padding: 0.8rem 1.2rem 1.2rem;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      border-top: 1px solid #f2f6f2;
+      background: #fefefc;
+    }
+
+    .btn-sm {
+      padding: 6px 16px;
+      border-radius: 60px;
+      font-weight: 500;
+      font-size: 0.7rem;
+      text-decoration: none;
+      transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      border: 1px solid #d4e2d9;
+      color: #2c6b4e;
+    }
+
+    .btn-sm:hover {
+      background: #f6fdf9;
+      border-color: var(--accent-sand);
+    }
+
+    .btn-cbt {
+      background: #e9c46a20;
+      border: 1px solid #e9c46a;
+      color: #9b6e2e;
+    }
+
+    .btn-cbt:hover {
+      background: #e9c46a;
+      color: #2d2b1f;
+    }
+
+    /* video section */
+    .video-showcase {
+      background: #ffffff;
+      border-radius: 2rem;
+      margin: 2rem 0 2rem;
+      padding: 1.8rem 1.5rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid #eaeef2;
+    }
+
+    .video-showcase h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #1b4e3c;
+    }
+
+    .video-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      justify-content: center;
+    }
+
+    .video-card {
+      background: #fafaf7;
+      border-radius: 1.2rem;
+      padding: 1rem 1.8rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: all 0.2s;
+      border: 1px solid #e3e9e4;
+      flex: 1;
+      min-width: 220px;
+      justify-content: center;
+    }
+
+    .video-card i {
+      font-size: 2rem;
+      color: #e63946;
+    }
+
+    .video-card span {
+      font-weight: 600;
+      color: #2c4b3a;
+    }
+
+    .video-card:hover {
+      background: #fef3e0;
+      transform: translateY(-3px);
+    }
+
+    footer {
+      background: #0f2a24;
+      color: #bdd3c8;
+      padding: 2rem;
+      text-align: center;
+      border-top: 1px solid #1f443a;
+      margin-top: 2.5rem;
+    }
+
+    footer a {
+      color: #e9c46a;
+      text-decoration: none;
+    }
+
+    @media (max-width: 720px) {
+      .container-wide {
+        padding: 0 1.2rem;
+      }
+      .group-header {
+        padding: 1rem 1.2rem;
+      }
+      .group-title {
+        font-size: 1rem;
+      }
+      .group-courses {
+        padding: 0 1rem 1rem;
+      }
+      .hero-main h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="site-header">
+  <div class="container-wide">
+    <div class="navbar">
+      <div class="logo-area">
+        <img src="logo.jpg" alt="IE Summary logo" class="logo-img" onerror="this.src='https://placehold.co/60x60?text=IE'">
+        <div class="logo-text">
+          <h2>IE Summary</h2> 
+          <p>Immaculate Envilinks • course mastery</p>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#" id="homeNav"><i class="fas fa-home"></i> Home</a>
+        <a href="#courses-section"><i class="fas fa-book-open"></i> Courses</a>
+        <a href="#video-resources"><i class="fab fa-youtube"></i> Video Tutorials</a>
+        <span class="badge-status" id="offlineStatus"><i class="fas fa-wifi"></i> Online</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="hero-main">
+    <div class="container-wide">
+      <h1>📘 IE Summary — Smart revision for 100–300 level</h1>
+      <p>Organised by semester & year • detailed summaries • direct CBT on ie-plus.vercel.app</p>
+    </div>
+  </div>
+
+  <div class="container-wide" id="courses-section">
+    <!-- expandable semesters accordion -->
+    <div class="courses-accordion" id="accordionRoot"></div>
+
+    <!-- Video resources section -->
+    <div class="video-showcase" id="video-resources">
+      <h3><i class="fab fa-youtube"></i> 📺 Video Tutorials & Playlists</h3>
+      <div class="video-grid">
+        <a href="https://youtube.com/@weshareter" target="_blank" class="video-card">
+          <i class="fab fa-youtube"></i>
+          <span>📹 WeShareTer Channel</span>
+        </a>
+        <a href="https://youtube.com/playlist?list=PLec_thd-Rs6vHCj_4ffP28GYYF_RtfHHR&si=ngfoKIB-MBJkhsfV" target="_blank" class="video-card">
+          <i class="fas fa-list"></i>
+          <span>🎓 Physics & Engr Playlist</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 IE Summary — powered by Envilinks Interconnectivity Media Concept | <a href="https://eimc.vercel.app" target="_blank"><a href="eimc.vercel.app">EIMC</a></p>
+  <p style="margin-top: 8px;">🎯 All CBT practice links redirect to <strong><a href="ie-plus.vercel.app">IE +++</a></strong> — practice smart!</p>
+</footer>
+
+<script>
+  // ======================= COURSE DATABASE (FULLY SYNC WITH FILES, LEVEL/SEM) =======================
+  const COURSES_DATA = [
+    // 100 LEVEL - 1st semester
+    { code: "GNS 101", title: "Use of English I", level: 100, sem: 1, desc: "Time management, note-taking, reading strategies, parts of speech.", summaryFile: "gns101.html", cbtTag: "GNS101" },
+    { code: "GNS 103", title: "Information & the Library", level: 100, sem: 1, desc: "Library classification, OPAC, research methods, citation styles.", summaryFile: "gns103.html", cbtTag: "GNS103" },
+    { code: "MTS 101", title: "Elementary Mathematics I", level: 100, sem: 1, desc: "Set theory, induction, sequences, quadratics, trig.", summaryFile: "mts101.html", cbtTag: "MTS101" },
+    { code: "MEE 101", title: "Engineering Drawing I", level: 100, sem: 1, desc: "Geometric constructions, polygons, tangents, isometric.", summaryFile: "mee101.html", cbtTag: "MEE101" },
+    { code: "PHY 101", title: "General Physics I", level: 100, sem: 1, desc: "Kinematics, Newton's laws, work-energy, rotational dynamics.", summaryFile: "phy101.html", cbtTag: "PHY101" },
+    { code: "PHY 103", title: "Properties of Matter", level: 100, sem: 1, desc: "Viscosity, surface tension, elasticity, gas laws, fluid statics.", summaryFile: "phy103.html", cbtTag: "PHY103" },
+    { code: "PHY 107", title: "Physics Practical I", level: 100, sem: 1, desc: "Lab safety, error analysis, pendulum, Young's modulus.", summaryFile: "phy107.html", cbtTag: "PHY107" },
+    { code: "CHE 101", title: "General Chemistry I", level: 100, sem: 1, desc: "Atomic structure, equilibrium, kinetics, quantum numbers.", summaryFile: "che101.html", cbtTag: "CHE101" },
+    { code: "CHE 103", title: "Chemistry Practical I", level: 100, sem: 1, desc: "Qualitative analysis, titrations, lab techniques.", summaryFile: "che103.html", cbtTag: "CHE103" },
+    { code: "CVE 105", title: "Philosophy of Science & Tech", level: 100, sem: 1, desc: "Scientific method, history of science, tech & environment.", summaryFile: "cve105.html", cbtTag: "CVE105" },
+    // 100 LEVEL - 2nd semester
+    { code: "CHE 102", title: "General Chemistry II", level: 100, sem: 2, desc: "Alcohols, carbonyl compounds, Grignard reactions.", summaryFile: "che102.html", cbtTag: "CHE102" },
+    { code: "CSC 102", title: "Intro to Computer Science", level: 100, sem: 2, desc: "Hardware, number systems, algorithms, programming basics.", summaryFile: "csc102.html", cbtTag: "CSC102" },
+    { code: "GNS 106", title: "Logic & Philosophy", level: 100, sem: 2, desc: "Socratic method, deductive/inductive reasoning, existentialism.", summaryFile: "gns106.html", cbtTag: "GNS106" },
+    { code: "MEE 102", title: "Workshop Practice", level: 100, sem: 2, desc: "Fitting, sheet metal, filing, riveting, machine tools.", summaryFile: "mee102.html", cbtTag: "MEE102" },
+    { code: "MTS 102", title: "Mathematics II (Calculus)", level: 100, sem: 2, desc: "Limits, differentiation, integration basics.", summaryFile: "mts102.html", cbtTag: "MTS102" },
+    { code: "MTS 104", title: "Mathematics IV (Advanced)", level: 100, sem: 2, desc: "Differential equations, vectors, advanced calculus.", summaryFile: "mts104.html", cbtTag: "MTS104" },
+    { code: "PHY 102", title: "General Physics II", level: 100, sem: 2, desc: "Electrostatics, capacitors, dielectrics, DC circuits.", summaryFile: "phy102.html", cbtTag: "PHY102" },
+    // 200 LEVEL - 1st semester
+    { code: "CSP 201", title: "General Agriculture", level: 200, sem: 1, desc: "Animal husbandry, livestock breeds, diseases, management.", summaryFile: "csp201.html", cbtTag: "CSP201" },
+    { code: "EEE 201", title: "Control Systems", level: 200, sem: 1, desc: "Open/closed loop, transfer function, stability, PID.", summaryFile: "eee201.html", cbtTag: "EEE201" },
+    { code: "MEE 201", title: "Manufacturing Processes", level: 200, sem: 1, desc: "Chip formation, tool life, machining, riveting.", summaryFile: "mee201.html", cbtTag: "MEE201" },
+    { code: "CVE 202", title: "Strength of Materials", level: 200, sem: 2, desc: "Stress-strain, beam deflection, torsion, pressure vessels.", summaryFile: "cve202.html", cbtTag: "CVE202" },
+    { code: "EEE 202", title: "Electronics II", level: 200, sem: 2, desc: "AC power, rectifiers, BJT, diode applications.", summaryFile: "eee202.html", cbtTag: "EEE202" },
+    { code: "MEE 202", title: "Engineering Drawing II", level: 200, sem: 2, desc: "Projection methods, development, assembly, isometric.", summaryFile: "mee202.html", cbtTag: "MEE202" },
+    { code: "MEE 206", title: "Engineering Thermodynamics", level: 200, sem: 2, desc: "Laws of thermodynamics, entropy, Carnot cycle.", summaryFile: "mee206.html", cbtTag: "MEE206" },
+    { code: "MTS 202", title: "Numerical Analysis", level: 200, sem: 2, desc: "Root finding, interpolation, integration, ODE solvers.", summaryFile: "mts202.html", cbtTag: "MTS202" },
+    // 300 LEVEL - 1st semester
+    { code: "AGE 301", title: "Agricultural Engineering", level: 300, sem: 1, desc: "Metallurgical thermodynamics, phase equilibria.", summaryFile: "age301.html", cbtTag: "AGE301" },
+    { code: "ENT 301", title: "Entrepreneurship", level: 300, sem: 1, desc: "Innovation types, feasibility study, venture capital.", summaryFile: "ent301.html", cbtTag: "ENT301" },
+    { code: "MTS 315", title: "Eng. Mathematics I", level: 300, sem: 1, desc: "Wronskian, Laplace, ODE, Frobenius method.", summaryFile: "mts315.html", cbtTag: "MTS315" },
+    { code: "EEE 301", title: "Electronics I", level: 300, sem: 1, desc: "Ebers-Moll, Fermi-Dirac, MOSFET, BJT modeling.", summaryFile: "eee301.html", cbtTag: "EEE301" },
+    { code: "ICT 305", title: "Electric Circuit Theory", level: 300, sem: 1, desc: "KCL, KVL, nodal/mesh analysis, capacitors/inductors.", summaryFile: "ict305.html", cbtTag: "ICT305" },
+    { code: "MTS 316", title: "Partial Differential Eq.", level: 300, sem: 2, desc: "Heat, wave, Laplace, separation of variables.", summaryFile: "mts316.html", cbtTag: "MTS316" }
+  ];
+
+  // Grouping descriptor: (level, semester, label, icon)
+  const GROUPS = [
+    { level: 100, sem: 1, label: "🎓 100 Level • First Semester", icon: "fa-leaf" },
+    { level: 100, sem: 2, label: "📖 100 Level • Second Semester", icon: "fa-sun" },
+    { level: 200, sem: 1, label: "📚 200 Level • First Semester", icon: "fa-chalkboard-user" },
+    { level: 200, sem: 2, label: "🔧 200 Level • Second Semester", icon: "fa-gear" },
+    { level: 300, sem: 1, label: "⚙️ 300 Level • First Semester", icon: "fa-microchip" },
+    { level: 300, sem: 2, label: "📡 300 Level • Second Semester", icon: "fa-waveform" }
+  ];
+
+  function getCbtLink(courseTag) {
+    return `https://ie-plus.vercel.app/?course=${encodeURIComponent(courseTag)}`;
+  }
+
+  function renderCourses() {
+    const container = document.getElementById('accordionRoot');
+    if (!container) return;
+
+    let html = '';
+    GROUPS.forEach(group => {
+      const groupCourses = COURSES_DATA.filter(c => c.level === group.level && c.sem === group.sem);
+      if (groupCourses.length === 0) return;
+
+      const groupId = `group-${group.level}-${group.sem}`;
+      html += `
+        <div class="semester-group" id="${groupId}">
+          <div class="group-header">
+            <div class="group-title">
+              <i class="fas ${group.icon}"></i>
+              <span>${group.label}</span>
+              <span class="group-badge">${groupCourses.length} courses</span>
+            </div>
+            <i class="fas fa-chevron-down toggle-icon"></i>
+          </div>
+          <div class="group-courses">
+      `;
+      groupCourses.forEach(course => {
+        html += `
+          <div class="course-card">
+            <div class="card-header">
+              <span class="code-badge">${course.code} • L${course.level}</span>
+              <h3>${course.title}</h3>
+            </div>
+            <div class="card-body">
+              <p>${course.desc}</p>
+            </div>
+            <div class="card-footer">
+              <a href="${course.summaryFile}" class="btn-sm"><i class="fas fa-file-alt"></i> Summary</a>
+              <a href="${getCbtLink(course.cbtTag)}" target="_blank" class="btn-sm btn-cbt"><i class="fas fa-laptop-code"></i> CBT Practice</a>
+            </div>
+          </div>
+        `;
+      });
+      html += `</div></div>`;
+    });
+    container.innerHTML = html;
+
+    // attach toggle listeners
+    document.querySelectorAll('.semester-group').forEach(group => {
+      const header = group.querySelector('.group-header');
+      const toggle = () => {
+        group.classList.toggle('open');
+      };
+      header.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggle();
+      });
+      // optional: initially first group open (100 first sem)
+      if (group.id === 'group-100-1') group.classList.add('open');
+    });
+  }
+
+  // offline detection & consistent UI
+  function updateOnlineBadge() {
+    const badge = document.getElementById('offlineStatus');
+    if (!badge) return;
+    if (navigator.onLine) {
+      badge.innerHTML = `<i class="fas fa-wifi"></i> Online`;
+      badge.style.background = "#e2f0e8";
+    } else {
+      badge.innerHTML = `<i class="fas fa-wifi-slash"></i> Offline (cached)`;
+      badge.style.background = "#fae1dd";
+    }
+  }
+
+  window.addEventListener('online', updateOnlineBadge);
+  window.addEventListener('offline', updateOnlineBadge);
+  
+  // scroll to courses smooth 
+  document.getElementById('homeNav')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  // optional: handle any missing summary fallback logic (all files exist)
+  renderCourses();
+  updateOnlineBadge();
+
+  // Also to ensure all CBT redirects target ie-plus.vercel.app (already set)
+  // video section already linked to exact URLs
+  // additional style consistency: use the same button colors and card look as ie-plus vibe
+  // For consistent CSS all over, ensure all topics use cohesive border radii, shadows
+  console.log("IE Summary ready — expandable groups, videos, and ie-plus CBT integration");
+</script>
+</body>
+</html>
