@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>ICT 204 - Signals & Systems | IE Summary</title><link rel="stylesheet" href="summary-style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></head>
+<body>
+    <div class="header"><div class="logo-area"><img src="logo.jpg" class="logo-img"><span>IE Summary</span></div><a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back</a></div>
+    <div class="container"><div class="hero"><h1>📶 ICT 204: Signals & Systems</h1><p>Periodic Signals | Convolution | LTI Systems | Fourier Transform</p></div>
+        <div class="topic"><h2><i class="fas fa-wave-square"></i> Signals</h2><p><strong>Periodic:</strong> x(t) = x(t+T) for all t<br><strong>Aperiodic:</strong> does not repeat<br><strong>Unit step:</strong> u(t) = 0 for t<0, 1 for t≥0<br><strong>Unit impulse:</strong> δ(t), ∫δ(t)dt = 1</p></div>
+        <div class="topic"><h2><i class="fas fa-asterisk"></i> Convolution</h2><p>x(t) * h(t) = ∫ x(τ)h(t-τ)dτ</p><div class="key">δ(t) * x(t) = x(t), u(t) = ∫δ(t)dt</div></div>
+        <div class="topic"><h2><i class="fas fa-cog"></i> LTI Systems</h2><p><strong>Linear:</strong> superposition applies<br><strong>Time-invariant:</strong> delayed input → delayed output<br><strong>Impulse response:</strong> h(t) characterizes system</p></div>
+        <div class="topic"><h2><i class="fas fa-chart-area"></i> Frequency Domain</h2><p><strong>Fourier transform:</strong> H(jω) = ∫h(t)e^(-jωt)dt<br><strong>Transfer function:</strong> H(s) = Laplace transform of h(t)</p></div>
+        <div class="topic"><h2><i class="fas fa-microchip"></i> System Types</h2><p><strong>Causal:</strong> depends on past/present only<br><strong>Anti-causal:</strong> depends on future<br><strong>Nyquist rate:</strong> fs > 2fmax</p></div>
+    </div><footer><p>© 2026 IE Summary | <a href="https://eimc.vercel.app">Envilinks</a></p></footer>
+</body>
+</html>

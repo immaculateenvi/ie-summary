@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>EEE 401 - Modern Control | IE Summary</title><link rel="stylesheet" href="summary-style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></head>
+<body>
+    <div class="header"><div class="logo-area"><img src="logo.jpg" class="logo-img"><span>IE Summary</span></div><a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back</a></div>
+    <div class="container"><div class="hero"><h1>🎯 EEE 401: Modern Control</h1><p>State Space | Controllability | Observability | State Feedback</p></div>
+        <div class="topic"><h2><i class="fas fa-cube"></i> State Space</h2><p>x' = Ax + Bu, y = Cx + Du<br>TF = C(sI-A)⁻¹B + D</p></div>
+        <div class="topic"><h2><i class="fas fa-check-circle"></i> Controllability</h2><p>All states can be reached from inputs<br>Controllability matrix: [B AB A²B ...]</p></div>
+        <div class="topic"><h2><i class="fas fa-eye"></i> Observability</h2><p>All states can be determined from outputs<br>Observability matrix: [C CA CA² ...]</p></div>
+        <div class="topic"><h2><i class="fas fa-sliders-h"></i> State Feedback</h2><p>u = -Kx + r, pole placement via choosing K<br>Eigenvalues of A are the system poles</p></div>
+        <div class="topic"><h2><i class="fas fa-binoculars"></i> Observers</h2><p>Estimates unmeasurable states, separation principle: observer and controller design independent</p></div>
+    </div><footer><p>© 2026 IE Summary | <a href="https://eimc.vercel.app">Envilinks</a></p></footer>
+</body>
+</html>
